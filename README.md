@@ -86,6 +86,30 @@ python benchmark_scripts/download_libero_datasets.py --datasets DATASET --use-hu
 
 The datasets hosted on HuggingFace are available at [here](https://huggingface.co/datasets/yifengzhu-hf/LIBERO-datasets).
 
+### LeRobot Format
+
+To download the LIBERO dataset in LeRobot format (compatible with the [LeRobot](https://github.com/huggingface/lerobot) library), use:
+
+```python
+python benchmark_scripts/download_lerobot_format.py --output-dir OUTPUT_DIR
+```
+
+where `OUTPUT_DIR` is the directory where the dataset will be saved.
+
+**Options:**
+- `--output-dir` (or `--outputdir`): Required. Directory where the dataset will be saved.
+- `--repo-id`: Optional. Hugging Face dataset repo ID (default: `physical-intelligence/libero`).
+- `--no-videos`: Optional. Skip downloading videos to save space.
+
+**Examples:**
+```python
+# Download dataset without videos
+python benchmark_scripts/download_lerobot_format.py --output-dir ./datasets/lerobot --no-videos
+
+# Download from a custom HuggingFace repo
+python benchmark_scripts/download_lerobot_format.py --output-dir ./datasets/lerobot --repo-id custom/repo-id
+```
+
 
 # Getting Started
 
